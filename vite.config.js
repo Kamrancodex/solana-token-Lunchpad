@@ -4,6 +4,8 @@ import react from "@vitejs/plugin-react";
 import { nodePolyfills } from "vite-plugin-node-polyfills";
 
 export default defineConfig({
+  // Correct placement of base
+  base: "/",
   plugins: [
     react(),
     nodePolyfills({
@@ -13,7 +15,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      // These aliases make sure that the Node.js modules are properly polyfilled
+      // These aliases ensure that Node.js modules are properly polyfilled
       buffer: "buffer",
       util: "util",
     },
