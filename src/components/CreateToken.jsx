@@ -110,8 +110,9 @@ const CreateToken = () => {
     const formData = new FormData();
     formData.append("file", file);
 
-    const pinataApiKey = import.meta.env.VITE_PINATA_API_KEY;
-    const pinataSecretApiKey = import.meta.env.VITE_PINATA_SECRET_API_KEY;
+    const pinataApiKey = "2c8fe69202c5d0429f61";
+    const pinataSecretApiKey =
+      "5ef4fc97beae5bf6184efa5f0c7d51f193db1c7a7f9bd1294aba75831f829813";
 
     try {
       const res = await axios.post(
