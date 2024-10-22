@@ -461,8 +461,11 @@ const CreateToken = () => {
       <Modal
         title={
           <div className="flex items-center space-x-2">
+            {/* Animated Checkmark */}
             <CheckCircleOutlined className="text-green-400 animate-pulse" />
-            <span className="text-gray-100">Token Created Successfully!</span>
+            <span className="text-gray-900 font-bold">
+              Token Created Successfully!
+            </span>
           </div>
         }
         visible={isModalVisible}
@@ -484,30 +487,45 @@ const CreateToken = () => {
           boxShadow: "0px 4px 30px rgba(0, 0, 0, 0.1)", // Subtle shadow for depth
         }}
         titleStyle={{
-          color: "#fff",
+          color: "#333", // Dark text color for title
           fontSize: "1.5rem",
         }}
       >
-        <div className="flex flex-col space-y-4">
-          <p className="text-sm lg:text-base">
-            <strong>Mint Address:</strong>{" "}
-            {modalData.mintAddress || "Not Available"}
-          </p>
-          <p className="text-sm lg:text-base">
-            <strong>Associated Token Account:</strong>{" "}
-            {modalData.associatedToken || "Not Available"}
-          </p>
-          <p className="text-sm lg:text-base">
-            <strong>Transaction ID:</strong>{" "}
-            <a
-              href={`https://explorer.solana.com/tx/${modalData.txid}?cluster=devnet`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-400 underline hover:text-blue-300 transition-colors duration-300"
-            >
-              View on Solana Explorer
-            </a>
-          </p>
+        {/* Success Message */}
+        <div className="flex flex-col items-center space-y-4">
+          <CheckCircleOutlined className="text-green-500 text-5xl animate-bounce" />
+          <h2 className="text-2xl font-bold text-gray-900">
+            {" "}
+            {/* Updated color */}
+            Token has been created successfully!
+          </h2>
+          <div className="flex flex-col space-y-4">
+            <p className="text-sm lg:text-base text-gray-900">
+              {" "}
+              {/* Updated color */}
+              <strong>Mint Address:</strong>{" "}
+              {modalData.mintAddress || "Not Available"}
+            </p>
+            <p className="text-sm lg:text-base text-gray-900">
+              {" "}
+              {/* Updated color */}
+              <strong>Associated Token Account:</strong>{" "}
+              {modalData.associatedToken || "Not Available"}
+            </p>
+            <p className="text-sm lg:text-base text-gray-900">
+              {" "}
+              {/* Updated color */}
+              <strong>Transaction ID:</strong>{" "}
+              <a
+                href={`https://explorer.solana.com/tx/${modalData.txid}?cluster=devnet`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 underline hover:text-blue-300 transition-colors duration-300"
+              >
+                View on Solana Explorer
+              </a>
+            </p>
+          </div>
         </div>
       </Modal>
     </div>
