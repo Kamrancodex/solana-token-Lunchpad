@@ -37,7 +37,7 @@ The Solana Token Launchpad is designed to allow users to create, mint, and manag
 To get started with the Solana Token Launchpad, clone the repository and install the dependencies.
 
 ```bash
-git clone https://github.com/your-username/token-launchpad.git
+git clone https://github.com/ksmrancodex/token-launchpad.git
 cd token-launchpad
 npm install
 ```
